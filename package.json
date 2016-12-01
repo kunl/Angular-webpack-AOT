@@ -1,0 +1,44 @@
+{
+  "name": "angular-quickstart",
+  "version": "1.0.0",
+  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "scripts": {
+    "dev:aot": "./node_modules/.bin/webpack-dev-server --config  webpack.aot.ts",
+    "dev": "./node_modules/.bin/webpack-dev-server --config  webpack.config.js --color",
+    "webpack:aot":  "./node_modules/.bin/webpack --config webpack.aot.ts",
+    "build": "npm run webpack:aot"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "~2.2.3",
+    "@angular/compiler": "~2.2.3",
+    "@angular/compiler-cli": "~2.2.3",
+    "@angular/core": "~2.2.3",
+    "@angular/forms": "~2.2.3",
+    "@angular/http": "~2.2.3",
+    "@angular/platform-browser": "~2.2.3",
+    "@angular/platform-browser-dynamic": "~2.2.3",
+    "@angular/router": "~3.2.3",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "^0.6.26"
+  },
+  "devDependencies": {
+    "@ngtools/webpack": "^1.1.6",
+    "@types/node": "^6.0.46",
+    "angular2-router-loader": "^0.3.4",
+    "html-webpack-plugin": "^2.24.1",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.4",
+    "systemjs": "^0.19.41",
+    "typescript": "^2.0.10",
+    "webpack": "^2.1.0-beta.27",
+    "webpack-dev-server": "^2.1.0-beta.12",
+    "webpack-merge": "^1.0.2",
+    "yargs": "^6.4.0"
+  },
+  "repository": {}
+}
