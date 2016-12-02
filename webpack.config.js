@@ -16,7 +16,7 @@ let webpackConfig = {
         path: path.resolve(__dirname, './aot')
     },
     plugins: [
-        new ExtractTextPlugin("./style.css"),
+        // new ExtractTextPlugin("./style.css"),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
         }),
@@ -34,14 +34,14 @@ let webpackConfig = {
                 'angular2-router-loader'
             ]
         }, {
-            // test: /\.css$/,
-            // include: `${__dirname}/src`,
-            // // loader: ['css-loader', 'style-loader']
-            //     use: ExtractTextPlugin.extract({
-            //         fallbackLoader: "css-loader",
-            //         use: ['style-loader', 'css-loader']
-            //     })
-        }, {
+            test: /\.css$/,
+            include: `${__dirname}/src`,
+            loader: ['css-loader', 'style-loader']
+        //         use: ExtractTextPlugin.extract({
+        //             fallbackLoader: "style-loader",
+        //             loader: 'css-loader'
+        //         })
+           }, {
             test: /\.styl$/,
             use: [
                 'stylus-loader',

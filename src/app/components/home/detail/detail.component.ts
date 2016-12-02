@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import {Observable} from 'rxjs/Rx';
+
 @Component({
     selector: 'detail',
     template: `
@@ -15,7 +17,7 @@ export class DetailComponent implements OnInit {
     }
 
     goBack(){
-        this._router.navigate(['/home', 'list'])
+        this._router.navigate(['/home'])
     }
     ngOnInit() { 
         this._route.params.map(p => p['id']).subscribe(params => {

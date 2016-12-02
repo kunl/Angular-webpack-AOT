@@ -6,13 +6,14 @@ import { DetailComponent } from './detail/detail.component';
 
 export const RouterConfig: Routes = [
 
+
   {
     path: '', component: HomeComponent,
     children: [
-      {  path: '', redirectTo: 'list', pathMatch: 'full' },
-      { path: 'list', component: ListComponent },
-      { path: 'detail/:id', component: DetailComponent}
+      { path: 'detail/:id', component: DetailComponent },
+
     ]
   },
+
 
 ];

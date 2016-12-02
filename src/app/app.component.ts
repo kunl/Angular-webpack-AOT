@@ -44,7 +44,8 @@ import { ActivatedRoute } from '@angular/router';
         <a [routerLink]="['/news']" routerLinkActive="active">
         news
         </a>
-        <router-outlet name="left"></router-outlet>
+        <router-outlet name="sidebar"></router-outlet>
+      
         <router-outlet></router-outlet>
     </div>
     

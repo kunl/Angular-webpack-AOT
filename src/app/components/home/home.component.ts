@@ -23,10 +23,10 @@ import { ActivatedRoute } from '@angular/router';
     template: `
         <h2>home page</h2>
         <div class="list">
-            <router-outlet></router-outlet>
+            <list></list>
         </div>
         <div class="detail">
-            <router-outlet name="right"></router-outlet>
+            <router-outlet></router-outlet>
         </div>
     `
 })

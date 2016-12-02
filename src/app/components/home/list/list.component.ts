@@ -19,7 +19,8 @@ import { Component, OnInit } from '@angular/core';
                     {{num}}
                 </a>
             </li>
-        </ul>       
+        </ul>   
+
     `
 })
 export class ListComponent implements OnInit {
