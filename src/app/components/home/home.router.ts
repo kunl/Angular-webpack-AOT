@@ -1,10 +1,18 @@
 import { Routes } from '@angular/router';
 
+import { HomeComponent } from './home.component';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
 
-export const rootRouterConfig: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'list', component: ListComponent },
-  { path: 'detail', component: DetailComponent }
+export const RouterConfig: Routes = [
+
+  {
+    path: '', component: HomeComponent,
+    children: [
+      {  path: '', redirectTo: 'list', pathMatch: 'full' },
+      { path: 'list', component: ListComponent },
+      { path: 'detail/:id', component: DetailComponent}
+    ]
+  },
+
 ];

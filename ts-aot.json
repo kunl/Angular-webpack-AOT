@@ -24,7 +24,7 @@
     ],
     "angularCompilerOptions": {
         "debug": true,
-        "skipMetadataEmit": false
+        "skipMetadataEmit": true
     },
     "compileOnSave": false,
     "buildOnSave": false

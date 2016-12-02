@@ -1,27 +1,59 @@
-import { Component } from '@angular/core';
-
+import { Component, Inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 @Component({
-  selector: 'my-app',
-  template: `
-    <h1>Hello {{name}}</h1>
+    selector: 'my-app',
+    styles: [
+        `
+        a{
+            text-decoration: none;
+            margin-right: 20px;
+            padding: 5px 10px;
+            border-bottom: 1px solid transparent;
+        }
 
-    <a [routerLink]="['/about']">
-      About
-    </a>
+        a.active {
+            border-color: pink
+        }
+
+        .content {
+            box-sizing: border-box;
+            margin: 20px auto;
+            width: 70vw;
+            padding: 30px
+        }
+        `
+    ],
+    template: `
+ 
+
+    <div class="content">
+        <h1>Hello {{name}}</h1>
+
+        <a [routerLink]="['/about']" routerLinkActive="active">
+        About
+        </a>
+        
+        <a [routerLink]="['/contact']" routerLinkActive="active">
+        contact
+        </a>
+
+        <a [routerLink]="['/home']" routerLinkActive="active">
+        home
+        </a>
+
+        <a [routerLink]="['/news']" routerLinkActive="active">
+        news
+        </a>
+        <router-outlet name="left"></router-outlet>
+        <router-outlet></router-outlet>
+    </div>
     
-    <a [routerLink]="['/contact']">
-      contact
-    </a>
-
-    <a [routerLink]="['/home']">
-      home
-    </a>
-
-    <a [routerLink]="['/news']">
-      news
-    </a>
-
-    <router-outlet></router-outlet>
   `,
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent {
+    name = 'Angular';
+    constructor( @Inject(ActivatedRoute) public _route: ActivatedRoute) {
+        console.log(this._route)
+    }
+
+}

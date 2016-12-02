@@ -1,12 +1,13 @@
 {
-  "name": "angular-quickstart",
+  "name": "Angular-webpack-AOT",
   "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Angular-webpack-AOT，width AOT, lazy loader",
   "scripts": {
     "dev:aot": "./node_modules/.bin/webpack-dev-server --config  webpack.aot.ts",
     "dev": "./node_modules/.bin/webpack-dev-server --config  webpack.config.js --color",
-    "webpack:aot":  "./node_modules/.bin/webpack --config webpack.aot.ts",
-    "build": "npm run webpack:aot"
+    "webpack:aot": "./node_modules/.bin/webpack --config webpack.aot.ts --colors",
+    "build": "npm run webpack:aot",
+    "ngc": "./node_modules/.bin/ngc -p ts-ngc.json"
   },
   "keywords": [],
   "author": "",
@@ -30,10 +31,14 @@
     "@ngtools/webpack": "^1.1.6",
     "@types/node": "^6.0.46",
     "angular2-router-loader": "^0.3.4",
+    "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "html-webpack-plugin": "^2.24.1",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.4",
-    "systemjs": "^0.19.41",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
     "typescript": "^2.0.10",
     "webpack": "^2.1.0-beta.27",
     "webpack-dev-server": "^2.1.0-beta.12",

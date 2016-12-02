@@ -5,7 +5,8 @@ let AotPlugin = require('@ngtools/webpack');
 
 let webpackConfig = {
     entry: {
-        polyfills: './src/polyfills',
+        polyfills: './src/polyfills.ts',
+        vendor: './src/vendor.ts',
         app: './src/main.ts'
     },
 
@@ -16,12 +17,15 @@ let webpackConfig = {
     },
 
     plugins: [
-        new AotPlugin.AotPlugin ({
+        new AotPlugin.AotPlugin({
             tsConfigPath: './ts-aot.json',
             // entryModule:  'src/app/app.module#AppModule'
             entryModule: path.join(process.cwd(), 'src', 'app', 'app.module') + '#AppModule'
         }),
-        // new webpack.optimize.UglifyJsPlugin()
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['app', 'vendor', 'polyfills']
+        }),
+        new webpack.optimize.UglifyJsPlugin()
     ],
 
     module: {
@@ -53,7 +57,7 @@ let defaultConfig = {
     },
     resolve: {
         extensions: ['.ts', '.js'],
-        modules: [ path.resolve(__dirname, 'node_modules')]
+        modules: [path.resolve(__dirname, 'node_modules')]
     },
     devServer: {
         contentBase: './',
@@ -61,7 +65,7 @@ let defaultConfig = {
         inline: true,
         stats: 'errors-only',
         historyApiFallback: true,
-        watchOptions: {aggregateTimeout: 100, poll: 500}
+        watchOptions: { aggregateTimeout: 100, poll: 500 }
     },
 
     node: {
