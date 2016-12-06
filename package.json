@@ -5,7 +5,7 @@
   "scripts": {
     "dev:aot": "./node_modules/.bin/webpack-dev-server --config  webpack.aot.ts --color --progress",
     "dev": "./node_modules/.bin/webpack-dev-server --config  webpack.config.js --color",
-    "webpack:aot": "./node_modules/.bin/webpack --config webpack.aot.ts --colors",
+    "webpack:aot": "./node_modules/.bin/webpack --config webpack.aot.ts --colors --progress",
     "build": "npm run webpack:aot"
   },
   "keywords": [],
@@ -30,6 +30,7 @@
     "@ngtools/webpack": "^1.1.9",
     "@types/node": "^6.0.46",
     "angular2-router-loader": "^0.3.4",
+    "compression-webpack-plugin": "^0.3.2",
     "css-loader": "^0.26.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "html-webpack-plugin": "^2.24.1",
