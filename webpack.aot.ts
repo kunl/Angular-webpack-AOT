@@ -18,9 +18,8 @@ let webpackConfig = {
 
     plugins: [
         new AotPlugin.AotPlugin({
-            tsConfigPath: './ts-aot.json',
-            // entryModule:  'src/app/app.module#AppModule'
-            entryModule: path.join(process.cwd(), 'src', 'app', 'app.module') + '#AppModule'
+            tsConfigPath: './tsconfig.json',
+            entryModule:  'src/app/app.module#AppModule'
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
