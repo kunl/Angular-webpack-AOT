@@ -12,8 +12,8 @@ let webpackConfig = {
         app: './src/main.ts'
     },
     output: {
-        publicPath: 'aot/',
-        path: path.resolve(__dirname, './aot')
+        publicPath: 'dist/',
+        path: path.resolve(__dirname, './dist')
     },
     plugins: [
         // new ExtractTextPlugin("./style.css"),
@@ -21,17 +21,19 @@ let webpackConfig = {
             name: ['app', 'vendor', 'polyfills']
         }),
         new HtmlWebpackPlugin({
-            template: 'index.html'
+            filename: 'index.html',
+            template: 'config/jit-tpl.html',
+            inject: true
         })
-        //  new webpack.optimize.UglifyJsPlugin()
     ],
 
     module: {
         rules: [{
             test: /\.ts$/,
             loaders: [
-                '@ngtools/webpack',
-                'angular2-router-loader'
+                'awesome-typescript-loader',
+                'angular2-router-loader',
+                'angular2-template-loader'
             ]
         }, {
             test: /\.css$/,
@@ -65,8 +67,8 @@ let defaultConfig = {
         extensions: ['.ts', '.js']
     },
     devServer: {
-        contentBase: './',
-        port: 3001,
+        contentBase: './dist',
+        port: 4001,
         inline: true,
         stats: 'errors-only',
         historyApiFallback: true,

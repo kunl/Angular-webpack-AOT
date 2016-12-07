@@ -4,7 +4,7 @@
   "description": "Angular-webpack-AOT，width AOT, lazy loader",
   "scripts": {
     "dev:aot": "./node_modules/.bin/webpack-dev-server --config  webpack.aot.ts --color --progress",
-    "dev": "./node_modules/.bin/webpack-dev-server --config  webpack.config.js --color",
+    "dev": "./node_modules/.bin/webpack-dev-server --config  webpack.config.js --color --inline --hot --content-base ./dist",
     "webpack:aot": "./node_modules/.bin/webpack --config webpack.aot.ts --colors --progress",
     "build": "npm run webpack:aot"
   },
@@ -30,6 +30,8 @@
     "@ngtools/webpack": "^1.1.9",
     "@types/node": "^6.0.46",
     "angular2-router-loader": "^0.3.4",
+    "angular2-template-loader": "^0.6.0",
+    "awesome-typescript-loader": "^3.0.0-beta.9",
     "compression-webpack-plugin": "^0.3.2",
     "css-loader": "^0.26.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",

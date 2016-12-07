@@ -24,8 +24,6 @@ import { ActivatedRoute } from '@angular/router';
         `
     ],
     template: `
- 
-
     <div class="content">
         <h1>Hello {{name}}</h1>
 
@@ -48,7 +46,6 @@ import { ActivatedRoute } from '@angular/router';
       
         <router-outlet></router-outlet>
     </div>
-    
   `,
 })
 export class AppComponent {
