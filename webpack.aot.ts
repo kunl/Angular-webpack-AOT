@@ -14,8 +14,8 @@ let webpackConfig = {
 
 
     output: {
-        publicPath: 'aot/',
-        path: path.resolve(__dirname, './aot')
+        publicPath: 'dist/',
+        path: path.resolve(__dirname, './dist')
     },
 
     plugins: [

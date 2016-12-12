@@ -43,7 +43,6 @@ import { ActivatedRoute } from '@angular/router';
         news
         </a>
         <router-outlet name="sidebar"></router-outlet>
-      
         <router-outlet></router-outlet>
     </div>
   `,

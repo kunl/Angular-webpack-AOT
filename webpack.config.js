@@ -67,7 +67,7 @@ let defaultConfig = {
         extensions: ['.ts', '.js']
     },
     devServer: {
-        contentBase: './dist',
+        contentBase: './',
         port: 4001,
         inline: true,
         stats: 'errors-only',
