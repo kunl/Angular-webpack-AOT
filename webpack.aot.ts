@@ -21,7 +21,8 @@ let webpackConfig = {
     plugins: [
         new ngtools.AotPlugin({
             tsConfigPath: './tsconfig.json',
-            entryModule: 'src/app/app.module#AppModule'
+            "skipMetadataEmit" : true,
+            "entryModule": "src/app/app.module#AppModule",
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
@@ -34,10 +35,10 @@ let webpackConfig = {
             minRatio: 0.3
         }),
         new webpack.optimize.UglifyJsPlugin(),
-        new HtmlWebpackPlugin({
-            template: 'config/aot-tpl.html',
-            inject: true
-        })
+        // new HtmlWebpackPlugin({
+        //     template: 'config/aot-tpl.html',
+        //     inject: true
+        // })
     ],
 
     module: {
