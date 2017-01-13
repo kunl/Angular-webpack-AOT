@@ -7,6 +7,7 @@
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
+    "baseUrl": "",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -22,5 +23,8 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "genDir": "."
+  }
 }
