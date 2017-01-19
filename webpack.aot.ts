@@ -21,8 +21,8 @@ let webpackConfig = {
     plugins: [
         new ngtools.AotPlugin({
             tsConfigPath: './tsconfig.json',
-            "skipMetadataEmit" : true,
-            "entryModule": "src/app/app.module#AppModule",
+            skipMetadataEmit: true,
+            entryModule: 'src/app/app.module#AppModule'
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
