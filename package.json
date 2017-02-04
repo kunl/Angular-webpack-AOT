@@ -20,6 +20,7 @@
     "@angular/platform-browser": "~4.0.0-beta.6",
     "@angular/platform-browser-dynamic": "~4.0.0-beta.6",
     "@angular/router": "~4.0.0-beta.6",
+
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.3",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@angular/compiler-cli": "~4.0.0-beta.6",
     "@ngtools/webpack": "^1.2.8",
+
     "@types/node": "^6.0.46",
     "angular2-router-loader": "^0.3.4",
     "angular2-template-loader": "^0.6.0",
@@ -40,8 +42,8 @@
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.4.0",
-    "typescript": "^2.0.10",
     "webpack": "^2.2.1",
+    "typescript": "^2.1.5",
     "webpack-dev-server": "^2.1.0-beta.12",
     "webpack-merge": "^1.0.2",
     "yargs": "^6.4.0"
