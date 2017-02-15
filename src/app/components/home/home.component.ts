@@ -23,7 +23,6 @@ import { ActivatedRoute } from '@angular/router';
     template: `
         <h2>home page</h2>
         <div class="list">
-            <list></list>
         </div>
         <div class="detail">
             <router-outlet></router-outlet>
