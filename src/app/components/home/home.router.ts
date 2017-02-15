@@ -10,7 +10,9 @@ export const RouterConfig: Routes = [
   {
     path: '', component: HomeComponent,
     children: [
+      { path: '', redirectTo: 'list', pathMatch: 'full' },
       { path: 'detail/:id', component: DetailComponent },
+      { path: 'list', component: ListComponent },
 
     ]
   },

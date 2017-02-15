@@ -21,6 +21,7 @@ export class DetailComponent implements OnInit {
     }
     ngOnInit() { 
         this._route.params.map(p => p['id']).subscribe(params => {
+            console.log('detial')
             this.id = params
         })
     }
