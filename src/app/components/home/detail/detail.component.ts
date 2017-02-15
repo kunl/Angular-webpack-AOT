@@ -13,7 +13,7 @@ import {Observable} from 'rxjs/Rx';
 export class DetailComponent implements OnInit {
     id:number;
 
-    constructor( @Inject(ActivatedRoute) public _route: ActivatedRoute, @Inject(Router) public _router: Router) {
+    constructor( public _route: ActivatedRoute, public _router: Router) {
     }
 
     goBack(){
