@@ -12,6 +12,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+<<<<<<< HEAD
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/core": "^4.0.0",
@@ -32,6 +33,27 @@
     "angular2-router-loader": "^0.3.5",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.1.2",
+=======
+    "@angular/common": "~4.0.0-rc.4",
+    "@angular/compiler": "~4.0.0-rc.4",
+    "@angular/core": "~4.0.0-rc.4",
+    "@angular/forms": "~4.0.0-rc.4",
+    "@angular/http": "~4.0.0-rc.4",
+    "@angular/platform-browser": "~4.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "~4.0.0-rc.4",
+    "@angular/router": "~4.0.0-rc.4",
+    "core-js": "^2.4.1",
+    "rxjs": "5.2.0",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "~4.0.0-rc.4",
+    "@ngtools/webpack": "^1.2.13",
+    "@types/node": "^7.0.5",
+    "angular2-router-loader": "^0.3.5",
+    "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.1.1",
+>>>>>>> 27f8997ec98eb7d06105071b3c779533fc2b7bda
     "compression-webpack-plugin": "^0.3.2",
     "css-loader": "^0.27.3",
     "html-webpack-plugin": "^2.28.0",
@@ -40,10 +62,17 @@
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.4.0",
+<<<<<<< HEAD
     "typescript": "^2.2.1",
     "webpack": "^2.3.1",
     "webpack-dev-server": "^2.4.2",
     "webpack-merge": "^1.0.2",
+=======
+    "typescript": "^2.1.6",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-merge": "^3.0.0",
+>>>>>>> 27f8997ec98eb7d06105071b3c779533fc2b7bda
     "yargs": "^6.4.0"
   },
   "repository": {}
