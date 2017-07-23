@@ -68,7 +68,7 @@ let defaultConfig = {
     },
     devServer: {
         contentBase: './',
-        port: 4001,
+        port:  process.env.PORT || 8080,
         inline: true,
         stats: 'errors-only',
         historyApiFallback: true,
