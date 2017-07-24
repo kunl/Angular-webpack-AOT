@@ -34,7 +34,9 @@ let webpackConfig = {
             threshold: 10240,
             minRatio: 0.3
         }),
+        new webpack.optimize.ModuleConcatenationPlugin(),
         new webpack.optimize.UglifyJsPlugin(),
+      
         // new HtmlWebpackPlugin({
         //     template: 'config/aot-tpl.html',
         //     inject: true

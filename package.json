@@ -5,7 +5,7 @@
   "scripts": {
     "dev:aot": "./node_modules/.bin/webpack-dev-server --config  webpack.aot.ts --color --progress",
     "dev": "./node_modules/.bin/webpack-dev-server --config  webpack.config.js --color --inline --hot --content-base ./dist",
-    "webpack:aot": "./node_modules/.bin/webpack --config webpack.aot.ts --colors --progress",
+    "webpack:aot": "./node_modules/.bin/webpack --config webpack.aot.ts --colors --progress ",
     "build": "npm run webpack:aot"
   },
   "keywords": [],
@@ -40,8 +40,8 @@
     "style-loader": "^0.18.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.4.0",
-    "typescript": "^2.3.4",
-    "webpack": "^3.0.0",
+    "typescript": "^2.4.2",
+    "webpack": "^3.3.0",
     "webpack-dev-server": "^2.6.1",
     "webpack-merge": "^4.1.0",
     "yargs": "^6.4.0"
